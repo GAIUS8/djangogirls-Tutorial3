@@ -9,12 +9,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-{% block content %}
-{% endblock %}
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-3 col-xs-2"></div>
+        <div class="header col-md-4 col-sm-6 col-xs-8">
+            <h1><a href="{% url 'post_list' %}">PRIMARY NEWS</a></h1>
+        </div>
+        <div class="col-md-4 col-sm-3 col-xs-2"></div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
 </body>
 </html>
