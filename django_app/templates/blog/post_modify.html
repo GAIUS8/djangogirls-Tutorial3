@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input class="form-control" type="text" name="title" value="{{ post.title }}">
+        <textarea class="form-control" name="text" id="" cols="30" rows="10">{{ post.text }}</textarea>
+        <button type="submit" class="btn btn-primary btn-block">수정</button>
+    </form>
+{% endblock %}
