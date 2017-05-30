@@ -5,6 +5,7 @@ from .models import Post
 def post_list(request):
     post = Post.objects.all().order_by('-created_date')
     context = {
-        'post': post
+        'title': 'PRIMARY NEWS',
+        'post': post,
     }
     return render(request, 'blog/post_list.html', context=context)
